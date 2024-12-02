@@ -13,6 +13,6 @@ Images were acquired for cultured mouse neurons expressing a fluorescent marker 
 The code base was written in Python (version 3.7.9) and R (version 4.4.1).
 
 
-Use function `neuriteSegmentation` to calculate
+
 
 
