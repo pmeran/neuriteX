@@ -2,8 +2,6 @@
 A collection of functions to evaluate the integrity of neuronal processes (neurites) in microscopy images
 
 ## Description
-For neurons cultured in a dish, a score is computed that reflects the integrity of neuronal processes, or neurites (i.e. axons and dendrites).  The code is primarily intended for neurodegeneration research in academia and industry. The codebase is written in Python (version 3.7.9) and R (version 4.4.1) and has been tested on Windows 10.
-
 For neurons cultured in a dish, a score is computed that reflects the integrity of neuronal processes, or neurites (i.e. axons and dendrites). The code is primarily intended for neurodegeneration research in academia and industry. The codebase is written in Python (version 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.
 
 Functionalities implemented in Python include: image correction; neurite segmentation with computation of raw score, corrected score, and neurite integrity index (NII); and generation of images representing processing intermediates (for optimization of parameters).
