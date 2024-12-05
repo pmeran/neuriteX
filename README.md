@@ -27,7 +27,7 @@ Perform the following steps
 ## S_1 – single image analysis
 
 In this section the following analysis steps can be run
-`# S_1 - read image`  
+`# S_1 - read image`<br />
 <div style="margin-left: 20px;">Read image from folder `img_ori` and display</div>
 `# S_1 - image correction`<br />
         Correct image (includes intensity and gamma correction)  
