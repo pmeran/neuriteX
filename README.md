@@ -31,25 +31,50 @@ Read and display image from folder `img_ori/`<br />
 - **S_1 - image correction**<br />
 Noise reduction, brightness adjustment, gamma correction<br />
 
-Function:
+Function:<br />
 `imgC, status = nX_correction(imgX, promMin = 5, perc_hi = 95, lim_I_new = 200, gamma = 0.8, win = 3, ord = 2)`<br />
 <br />
-`imgC`	output image<br />
-`status`	returns 1 if correct, -1 if problematic (e.g. input image is black, has no detectable structures<br />
-
+Returns:<br />
+`imgC`	corrected output image<br />
+`status`	returns 1 if correct, or error code -1 if input image has no detectable structures<br />
+<br />
+Parameters:<br />
 `imgX`	input image (numpy array, 1196 x 1196, np.uint8)<br />
 `promMin`	minimum peak prominence<br />
-`perc_hi`	percentile of detected peak intensities to use as input pivot for brightness adjustment<br />
-`lim_I_new`	output pivot intensity for brightness adjustment<br />
-`gamma`	parameter for gamma correction<br />
+`perc_hi`	percentile of detected peak intensities to use as input intensity pivot for brightness adjustment<br />
+`lim_I_new`	output intensity pivot for brightness adjustment<br />
+`gamma`	gamma correction parameter <br />
 `win`	window size for Savitzky-Golay noise reduction<br />
 `ord`	order for Savitzky-Golay noise reduction<br />
-
 <br />
-- **S_1 - image segmentation and test images**<br />
-Generate raw neurite integrity score, create stack of images showing intermediate processing states<br /> 
+- **S_1 - image segmentation, generation of test images**<br />
+Generate raw neurite integrity score, create stack of images showing intermediate processing states<br />
+
+Function:<br />
+`D, stack = nX_segmentation_test (imgC, img_file, ptUL=(10,10), eH=100, extF = 3, win = 3, ord=2, t = 100000)`<br />
+<br />
+Returns:<br />
+`D`	dictionary with output `N_perc`, the percentage of neurite pixels among all peak pixels<br />
+`stack`	stack of images representing various stages of analysis (for parameter adjustments)<br />
+<br />
+Parameters:<br />
+`imgC`	(corrected) input image (numpy array, 1196 x 1196, np.uint8)<br />
+`img_file`	filename of original image<br />
+`ptUL`	upper left anchor of image area to be analyzed<br />
+`eH`	half edge length of image area to be analyzed<br />
+`extF`	scaling factor for analysis<br />
+`win`	window size for Savitzky-Golay noise reduction<br />
+`ord`	order for Savitzky-Golay noise reduction<br />
+`t`	number of peak pixels to be selected randomly for image analysis<br />
+<br />
 - **S_1 – image segmentation**<br />
 Generate raw neurite integrity score<br />
+
+Function:<br />
+`D = nX_segmentation (imgC, img_file, ptUL=(10,10), eH=100, extF=3, win=3, ord=2, t=100000)`<br />
+<br />
+Function `nX_segmentation` does not return `stack` but is otherwise identical to function `nX_segmentation_test`<br />
+
 
           
 
