@@ -27,7 +27,7 @@ Perform the following steps:
 
 This section includes the following operations:<br />
 **S_1 - read image**
-  <dd>Read and display image from folder `img_ori/`</dd>
+&nbsp;Read and display image from folder `img_ori/`  
 
 **S_1 - image correction**
 <dl>
