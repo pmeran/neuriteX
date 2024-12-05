@@ -76,7 +76,7 @@ Function:<br />
 Function `nX_segmentation` does not return `stack` but is otherwise identical to function `nX_segmentation_test`.
 Function `nX_segmentation` is faster and is used for batch processing.<br />
 <br /><br /><br />
-<img src="demo_image_readme.md.PNG" width="800"/>
+<img src="demo_image_2.PNG" width="800"/>
 
 
 
