@@ -27,13 +27,22 @@ Perform the following steps:
 
 This section includes the following operations:<br />
 **S_1 - read image**<br />
-.     Read image from folder `img_ori` and display  
+<dl>
+  <dd>Read and display image from folder `img_ori/`</dd>
+</dl>
 **S_1 - image correction**<br />
-        Correct image (includes intensity and gamma correction)  
+<dl>
+  <dd>Correct image (noise reduction, brightness, gamma correction)</dd>
+</dl>          
 **S_1 - image segmentation test**<br />
-        Generate raw neurite integrity score, create stack of images showing intermediate processing states  
+<dl>
+  <dd>Generate raw neurite integrity score, create stack of images showing intermediate processing states</dd>
+</dl>  
 **S_1 – image segmentation**<br />
-        Generate raw neurite integrity score  
+<dl>
+  <dd>Generate raw neurite integrity score</dd>
+</dl> 
+          
 
 
 
