@@ -30,10 +30,9 @@ This section includes the following operations:<br />
 &nbsp;&nbsp;Read and display image from folder `img_ori/`  asdflaksjdflkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdf
 
 **S_1 - image correction**<br />
-<dl>
-  <dd>Correct image (noise reduction, brightness, gamma correction)</dd>
-</dl>
-
+<div style="margin-left: 30px;">
+Correct image (noise reduction, brightness, gamma correction)
+</div>
 **S_1 - image segmentation test**<br />
 <dl>
   <dd>Generate raw neurite integrity score, create stack of images showing intermediate processing states</dd>
