@@ -8,7 +8,7 @@ Functionalities implemented in Python include: image correction; neurite segment
 
 Charts for visualization of multiple conditions are created in R.
 
-The provided step-by-step guide requires knowledge of Python and R, and the use of IDEs (e.g. PyCharm and R Studio).  ImageJ (or Fiji) is helpful to look at some of the generated outputs.
+The provided step-by-step guide requires knowledge of Python and R, which are used inside IDEs (e.g. PyCharm and R Studio).  ImageJ (or Fiji) is not an absolute requirement, but is helpful to look at some of the generated outputs.
 
 
 ## Analysis – first steps
@@ -24,16 +24,17 @@ Perform the following steps
   `path_main = '<path_main>/neuriteX_root_folder/'`<br />
   then replace `<path_main>` with absolute path for root folder<br />
 
-Section `# S_1 – single image analysis`
+## S_1 – single image analysis
 
+In this section the following analysis steps can be run
 `# S_1 - read image`<br />
-  Read image from folder `img_ori` and display  
+        Read image from folder `img_ori` and display  
 `# S_1 - image correction`<br />
-  Correct image (includes intensity and gamma correction)  
+        Correct image (includes intensity and gamma correction)  
 `# S_1 - image segmentation test`<br />
-  Generate raw neurite integrity, create stack of images showing intermediate processing states  
-`# S_1 – image segmentation`<br />  
-  Generate raw neurite integrity score  
+        Generate raw neurite integrity score, create stack of images showing intermediate processing states  
+`# S_1 – image segmentation`<br />
+        Generate raw neurite integrity score  
 
 
 
