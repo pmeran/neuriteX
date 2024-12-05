@@ -26,20 +26,20 @@ Perform the following steps:
 ## S_1 – single image analysis
 
 This section includes the following operations:<br />
-**S_1 - read image**
-&nbsp;Read and display image from folder `img_ori/`  
+**S_1 - read image**<br />
+&nbsp;&nbsp;Read and display image from folder `img_ori/`  asdflaksjdflkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
 
-**S_1 - image correction**
+**S_1 - image correction**<br />
 <dl>
   <dd>Correct image (noise reduction, brightness, gamma correction)</dd>
 </dl>
 
-**S_1 - image segmentation test**
+**S_1 - image segmentation test**<br />
 <dl>
   <dd>Generate raw neurite integrity score, create stack of images showing intermediate processing states</dd>
 </dl>
 
-**S_1 – image segmentation**
+**S_1 – image segmentation**<br />
 <dl>
   <dd>Generate raw neurite integrity score</dd>
 </dl>
