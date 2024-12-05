@@ -32,25 +32,18 @@ Read and display image from folder `img_ori/`<br />
 Noise reduction, brightness adjustment, gamma correction<br />
 
 Function:
-`imgC, status = nX_correction(imgX, promMin = 5, perc_hi = 95, lim_I_new = 200, gamma = 0.8, win = 3, ord = 2)`
+`imgC, status = nX_correction(imgX, promMin = 5, perc_hi = 95, lim_I_new = 200, gamma = 0.8, win = 3, ord = 2)`<br />
+<br />
+`imgC`	output image<br />
+`status`	returns 1 if correct, -1 if problematic (e.g. input image is black, has no detectable structures<br />
 
-`imgC`	output image
-`status`	returns 1 if correct, -1 if problematic (e.g. input image is black, has no detectable structures
-
-`imgX`	input image (numpy array, 1196 x 1196, np.uint8)
-`promMin`	minimum peak prominence
-`perc_hi`	percentile of detected peak intensities to use as input pivot for brightness adjustment
-`lim_I_new`	output pivot intensity for brightness adjustment
-`gamma`	parameter for gamma correction
-`win`	window size for Savitzky-Golay noise reduction
-`ord`	order for Savitzky-Golay noise reduction
-
-
-
-
-
-
-
+`imgX`	input image (numpy array, 1196 x 1196, np.uint8)<br />
+`promMin`	minimum peak prominence<br />
+`perc_hi`	percentile of detected peak intensities to use as input pivot for brightness adjustment<br />
+`lim_I_new`	output pivot intensity for brightness adjustment<br />
+`gamma`	parameter for gamma correction<br />
+`win`	window size for Savitzky-Golay noise reduction<br />
+`ord`	order for Savitzky-Golay noise reduction<br />
 
 <br />
 - **S_1 - image segmentation and test images**<br />
