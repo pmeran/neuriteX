@@ -20,16 +20,20 @@ Perform the following steps
 -	From downloaded repository, transfer folder 'img_ori/' and file 'neuriteX.py' to root folder
 -	Open `neuriteX.py` in PyCharm
 -	Run `neuriteX.py` code from first line all the way down to `END OF METHODS`
--	Move to section `# S_1 - single image analysis` and find the following line of code:
-  `path_main = '<path_main>/neuriteX_root_folder/'`
-  then replace `<path_main>` with absolute path for root folder
+-	Move to section `# S_1 - single image analysis` and find the following line of code:<br />
+  `path_main = '<path_main>/neuriteX_root_folder/'`<br />
+  then replace `<path_main>` with absolute path for root folder<br />
 
 Section `# S_1 – single image analysis`
 
-`# S_1 - read image`
-`# S_1 - image correction`
-`# S_1 - image segmentation test`
-`# S_1 – image segmentation`
+`# S_1 - read image`<br />
+  Read image from folder `img_ori` and display  
+`# S_1 - image correction`<br />
+  Correct image (includes intensity and gamma correction)  
+`# S_1 - image segmentation test`<br />
+  Generate raw neurite integrity, create stack of images showing intermediate processing states  
+`# S_1 – image segmentation`<br />  
+  Generate raw neurite integrity score  
 
 
 
