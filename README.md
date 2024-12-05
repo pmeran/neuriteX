@@ -29,7 +29,7 @@ This section includes the following operations:<br />
 - **S_1 - read image**<br />
 Read and display image from folder `img_ori/`<br />
 - **S_1 - image correction**<br />
-Correct image (noise reduction, brightness, gamma correction)<br />
+Correct image (noise reduction, brightness adjustment, gamma correction)<br />
 - **S_1 - image segmentation and test images**<br />
 Generate raw neurite integrity score, create stack of images showing intermediate processing states<br /> 
 - **S_1 – image segmentation**<br />
