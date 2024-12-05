@@ -30,18 +30,21 @@ This section includes the following operations:<br />
 <dl>
   <dd>Read and display image from folder `img_ori/`</dd>
 </dl>
+
 **S_1 - image correction**<br />
 <dl>
   <dd>Correct image (noise reduction, brightness, gamma correction)</dd>
-</dl>          
+</dl>
+
 **S_1 - image segmentation test**<br />
 <dl>
   <dd>Generate raw neurite integrity score, create stack of images showing intermediate processing states</dd>
-</dl>  
+</dl>
+
 **S_1 – image segmentation**<br />
 <dl>
   <dd>Generate raw neurite integrity score</dd>
-</dl> 
+</dl>
           
 
 
