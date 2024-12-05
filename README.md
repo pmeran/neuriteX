@@ -25,23 +25,15 @@ Perform the following steps:
 
 ## S_1 – single image analysis
 
-This section includes the following operations:<br />
+This section includes the following operations:<br /><br />
 **S_1 - read image**<br />
-&nbsp;&nbsp;Read and display image from folder `img_ori/`  asdflaksjdflkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdfkasdflkjasdf asdflkajs   asdflkjaslkjflaksjdf
-
+Read and display image from folder `img_ori/`  
 **S_1 - image correction**<br />
-<div style="margin-left: 30px;">
-Correct image (noise reduction, brightness, gamma correction)
-</div>
+Correct image (noise reduction, brightness, gamma correction)  
 **S_1 - image segmentation test**<br />
-<dl>
-  <dd>Generate raw neurite integrity score, create stack of images showing intermediate processing states</dd>
-</dl>
-
+Generate raw neurite integrity score, create stack of images showing intermediate processing states  
 **S_1 – image segmentation**<br />
-<dl>
-  <dd>Generate raw neurite integrity score</dd>
-</dl>
+Generate raw neurite integrity score  
           
 
 
