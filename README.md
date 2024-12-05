@@ -10,6 +10,15 @@ Charts for visualization of multiple conditions are created in R.<br />
 The provided step-by-step guide requires knowledge of Python and R; the use of IDEs (e.g. PyCharm and R Studio) is recommended.  ImageJ (or Fiji) is helpful to look at some of the generated output images.<br />
 
 
+<br />
+<h1 style="display: inline-block; margin-left: 300 px; font-family: Arial;">
+This paragraph will be shifted to the right using inline CSS.
+You can adjust the `margin-left` value as needed.
+</h1>
+
+
+
+
 ## Analysis – first steps
 
 Perform the following steps:
@@ -77,6 +86,7 @@ Function `nX_segmentation` does not return `stack` but is otherwise identical to
 Function `nX_segmentation` is faster and is used for batch processing.<br />
 <br /><br /><br />
 <img src="demo_image_2.PNG" width="800"/>
+
 
 
 
