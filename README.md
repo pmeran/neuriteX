@@ -84,9 +84,10 @@ Neurodegeneration experiments require comparison of multiple conditions set up i
 Folder `img_ori` contains sample images from a neurodegeneration experiment involving axotomy. The provided images represent two conditions ('uncut', 'cut'), 3 scenes (i.e. imaging areas) per condition, and 7 acquisition time points for each scene, resulting in a total of 2 * 3 * 7 = 42 images. Spreadsheet `df_excel.xlsx` lists all images and their relation to scenes, conditions, and time points. Since the spreadsheet can get quite complex for larger experiments, and is an integral part for creating charts, it should be generated programmatically, as shown (code section `Create excel spreadsheet` in file `neuriteX.py`).<br /><br />
 Code for batch image processing is structured into the following two sections, which should be run sequentially:<br />
 - **2.1&nbsp;&nbsp;Batch processing - image correction**<br />
-- **2.2&nbsp;&nbsp;Batch processing - image segmentation**<br /><br />
+- **2.2&nbsp;&nbsp;Batch processing - image segmentation**
+
 Both modules make use of the same functions used for single image processing.<br /><br />
-Image segmentation is very time intensive, posing challenges for parameter optimization, and resulting in very long run times.<br />
+Image segmentation is very time intensive, posing challenges for parameter optimization and resulting in very long run times.<br />
 To facilitate <ins>parameter optimization</ins>, both segmentation functions (`nX_segmentation` and `nX_segmentation_test`) offer the option to minimize the analyzed image area (by tweaking parameters `pUL` = upper left corner, and `eH` = half edge of image area to be analyzed). As a result, setting `eH = 100` takes about 15 seconds; while `eH = 580` takes about 6 minutes to complete.<br />
 <ins>Run times</ins> were considerably shortened by parallelization. To cope with run times of several hours, we successfully ran the code without major tweaks on a Linux compute cluster (sample scripts are given in folder `src_cluster`).<br /><br />
 Batch processing generates a raw neurite integrity score `N_perc` for each image, and stores values in file `df_seg.pkl`.<br /><br />
