@@ -1,8 +1,8 @@
 # neuriteX
-A collection of functions to evaluate the integrity of nerve cell processes (neurites) in microscopy images
+A collection of functions to quantify degeneration of nerve cell processes (neurites) in microscopy images
 
 ## Description
-For neurons (nerve cells) expressing a fluorescent cytoplasmic marker, the integrity of neurites (axons and dendrites) is evaluated, and a numerical score is returned. The code is primarily intended for research laboratories in academia and industry that study neurodegeneration. The codebase is written in Python (version 3.6.7, 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.<br />
+For neurons (nerve cells) expressing a fluorescent marker, the integrity of neurites (axons and dendrites) is evaluated, and a numerical score is returned. The code is primarily intended for research laboratories in academia and industry that study neurodegeneration. The codebase is written in Python (version 3.6.7, 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.<br />
 <br />
 <ins>Image analysis</ins> is implemented in Python and includes: image correction; neurite segmentation with computation of the neurite integrity index (NII); and generation of images representing processing intermediates (for parameter optimization).<br />
 <ins>Visualization of results</ins> is implemented in R.<br />
@@ -93,7 +93,7 @@ To facilitate <ins>parameter optimization</ins>, both segmentation functions `nX
 <ins>Run times</ins> were considerably shortened by parallelization. To cope with run times of several hours, we successfully ran the code without major tweaks on a Linux compute cluster (sample scripts are given in folder `src_cluster`).<br /><br />
 Batch processing generates a raw neurite integrity score `N_perc` for each image, and stores values in file `df_seg.pkl`.<br /><br />
 
-## 3. Scoring neurite integrity
+## 3. Neurite integrity score visualization
 This section merges experiment information in df_excel.xlsx with neurite integrity scores: N_perc (df_R1.csv), N_perc_corr (df_R2.csv), and NII (file df_R3.csv).<br />
 - **N_perc**<br />
 N_perc is a raw score of neurite integrity, defined as the percentage of neurite pixels (2nd filter) versus cross-sectional peaks (1st filter) (Fig. 1a, 2). N_perc normalizes for area and overall image complexity.<br />
