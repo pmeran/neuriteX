@@ -4,10 +4,10 @@ A collection of functions to quantify degeneration of nerve cell processes (neur
 ## Description
 For neurons (nerve cells) expressing a fluorescent marker, the integrity of neurites (axons and dendrites) is evaluated, and a numerical score is returned. The code is primarily intended for research laboratories in academia and industry that study neurodegeneration. The codebase is written in Python (version 3.6.7, 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.<br />
 <br />
-<ins>Image analysis</ins> is implemented in Python and includes: image correction; neurite segmentation with computation of the neurite integrity index (NII); and generation of images representing processing intermediates (for parameter optimization).<br />
+<ins>Image analysis</ins> is implemented in Python and includes: image correction; neurite segmentation with computation of the neurite integrity index (NII); and generation of images representing processing intermediates (for parameter optimization).<br /><br />
 <ins>Visualization of results</ins> is implemented in R.<br />
 <br />
-A step-by-step guide is provided that requires knowledge of Python and R, as well as familiarity with the use of IDEs (PyCharm and R Studio). ImageJ (or Fiji) is not required but helpful for evaluation of generated image stacks.<br />
+The provided step-by-step guide requires knowledge of Python and R, as well as familiarity with the use of IDEs (PyCharm and R Studio). ImageJ (or Fiji) is not required but helpful for evaluation of generated image stacks.<br />
 
 
 ## Analysis – first steps
@@ -93,16 +93,32 @@ To facilitate <ins>parameter optimization</ins>, both segmentation functions `nX
 <ins>Run times</ins> were considerably shortened by parallelization. To cope with run times of several hours, we successfully ran the code without major tweaks on a Linux compute cluster (sample scripts are given in folder `src_cluster`).<br /><br />
 Batch processing generates a raw neurite integrity score `N_perc` for each image, and stores values in file `df_seg.pkl`.<br /><br />
 
-## 3. Neurite integrity score visualization
-This section merges experiment information in df_excel.xlsx with neurite integrity scores: N_perc (df_R1.csv), N_perc_corr (df_R2.csv), and NII (file df_R3.csv).<br />
+## 3. Merging neurite integrity scores with experimental metadata
+This section merges various neurite integrity scores with information about experimental conditions file `df_excel.xlsx`.<br />
+
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+
+
+
+with variouis neurite integrity scores.
+Three different neurite integrity scores - `N_perc`, `N_perc_corr`, and `NII` - 
+
+
+ion about experimental conditions ity scores in dataframe `df_seg` for all images with file `df_excel.xlsx` with neurite integrity scores: N_perc (df_R1.csv), N_perc_corr (df_R2.csv), and NII (file df_R3.csv).<br />
 - **N_perc**<br />
-N_perc is a raw score of neurite integrity, defined as the percentage of neurite pixels (2nd filter) versus cross-sectional peaks (1st filter) (Fig. 1a, 2). N_perc normalizes for area and overall image complexity.<br />
+N_perc is a raw score of neurite integrity, defined as the percentage of neurite pixels (2nd filter) versus cross-sectional peaks (1st filter) (Fig. 1a, Fig. 1b). N_perc normalizes for area and overall image complexity.<br />
 - **N_perc_corr**<br />
 N_perc_corr results from correction of N_perc, which to some extent is affected by background variability.<br />
 - **NII**<br />
 The neurite integrity index (NII) results from normalization of N_perc_corr, using the earliest time point (4 h or earlier) of N_perc_corr as reference.<br />
 <br />
 Charts for all three scores are generated with neuriteX.R, taking files df_R1.csv, df_R2.csv, and df_R3.csv as input.<br />
+<br />
+
+## 4. Visualization of neurite integrity scores.
 <br />
 <img src="neuriteX_Fig.3.PNG" width="800"/>
 
