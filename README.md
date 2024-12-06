@@ -38,7 +38,7 @@ Images of intact neurites (top left) and degenerated neurites (bottom left) were
 <br /><br />
 
 Details for modules in section `#1. Single image analysis` in `neuriteX.py`:<br />
-- **1.1&nbsp;&nbsp;Display image**<br />
+- **1.1&nbsp;&nbsp;Image display**<br />
 Display of original images in folder `img_ori/`<br /><br />
 - **1.2&nbsp;&nbsp;Image correction**<br />
 Noise reduction, adaptive brightness adjustment, and gamma correction<br /><br />
