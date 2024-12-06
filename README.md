@@ -19,7 +19,7 @@ A step-by-step guide is provided that requires knowledge of Python and R, as wel
 &nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;To import modules and load methods, run code in `neuriteX.py` from first line all the way down to `END OF METHODS`<br />
 &nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;Move to section `# 1. Single image analysis` and find the following line of code:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`path_main = '<path_main>/neuriteX_root_folder/'`<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;then replace `<path_main>` with the absolute path for `neuriteX_root folder/`<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;then replace `<path_main>` with the absolute path for `neuriteX_root_folder/`<br />
 
 ## 1. Single image analysis
 
@@ -29,11 +29,13 @@ To get familiar with the analysis pipeline, it is recommended to first analyze s
 Images are analyzed in two sequential steps, using two segmentation filters. The first filter identifies pixels corresponding to peaks in cross-sectional intensity profiles. The second filter examines the local surroundings of pixels identified in the first step, and selects them if they are part of neurites (curvilinear structures) or rejects them if they are part of blebs (small spherical or elliptical structures).<br />
 For each image, a raw numerical score `N_perc` (for neurite percent) is calculated, defined as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks). `N_perc` can be retrieved from variable `D` as `D['N_perc']`, which is returned by functions `nX_segmentation_test()` and `nX_segmentation()` (further explained below).<br /><br />
 
-**Fig. 1.a&nbsp;&nbsp;Segmentation performance with microscopic images of neurites.**<br /><br />
-The shown images have a size of 400 x 400 pixels, corresponding to 265 x 265 um.
+**Fig. 1.a&nbsp;&nbsp;Neurite segmentation**<br />
+Images of intact neurites (top left) and degenerated neurites (bottom left) were analyzed using two sequential segmentation filters.<br />
+A raw score for neurite integrity is calculated as the percentage of pixels passing the 2nd filter versus pixels passing the 1st filter.<br />
+Image size 400 x 400 pixels, or 88.4 x 88.4 µm.<br />
 <img src="neuriteX_Fig.1a.PNG" width="600"/>
 <br /><br />
-**Fig. 1.b&nbsp;&nbsp;Segmentation performance with simulated images.**<br /><br />
+**Fig. 1.b&nbsp;&nbsp;Neurite segmentation using simulated images.**<br /><br />
 <img src="neuriteX_Fig.1b.PNG" width="600"/>
 <br /><br />
 
