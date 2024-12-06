@@ -3,8 +3,9 @@ A collection of functions to evaluate the integrity of nerve cell processes (neu
 
 ## Description
 For neurons (nerve cells) expressing a fluorescent cytoplasmic marker, the integrity of neurites (axons and dendrites) is evaluated, and a numerical score is returned. The code is primarily intended for research laboratories in academia and industry that study neurodegeneration. The codebase is written in Python (version 3.6.7, 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.<br />
-Image analysis is implemented in Python and includes: image correction; neurite segmentation with computation of the neurite integrity index (NII); and generation of images representing processing intermediates (for parameter optimization).<br />
-Visualization of results is implemented in R.<br />
+<br />
+<ins>Image analysis</ins> is implemented in Python and includes: image correction; neurite segmentation with computation of the neurite integrity index (NII); and generation of images representing processing intermediates (for parameter optimization).<br />
+<ins>Visualization of results</ins> is implemented in R.<br />
 <br />
 A step-by-step guide is provided that requires knowledge of Python and R, as well as familiarity with the use of IDEs (PyCharm and R Studio). ImageJ (or Fiji) is not required but helpful for evaluation of generated image stacks.<br />
 
@@ -32,7 +33,7 @@ For each image, a raw numerical score `N_perc` (for neurite percentage) is calcu
 Images of intact neurites (top left) and degenerated neurites (bottom left) were analyzed using two sequential segmentation filters.<br />A raw score for neurite integrity is calculated as the percentage of pixels passing the 2nd filter versus pixels passing the 1st filter.<br />Image edge 400 pixels, or 88.4 µm.<br />
 <img src="neuriteX_Fig.1a.PNG" width="600"/>
 <br /><br />
-**Fig. 1.b&nbsp;&nbsp;Neurite segmentation using simulated images**<br /><br />
+**Fig. 1.b&nbsp;&nbsp;Neurite segmentation using simulated images**<br />
 <img src="neuriteX_Fig.1b.PNG" width="600"/>
 <br /><br />
 
