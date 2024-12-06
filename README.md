@@ -4,7 +4,7 @@ A collection of functions to evaluate the integrity of nerve cell processes (neu
 ## Description
 For neurons modified with a fluorescent cytoplasmic marker, a score is computed that reflects the integrity of all neurites (axons and dendrites). The code is primarily intended for research labs in academia and industry that study neurodegeneration. The codebase is written in Python (version 3.6.7, 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.
 
-Image analysis is implemented in Python and includes: image correction; neurite segmentation with computation of raw score, corrected score, and neurite integrity index (NII); and generation of images representing processing intermediates (for optimization of parameters).<br />
+Image analysis is implemented in Python and includes: image correction; neurite segmentation with computation of the neurite integrity index (NII); and generation of images representing processing intermediates (for parameter optimization).<br />
 Result visualization is implemented in R.<br />
 <br />
 For the provided step-by-step guide, knowledge of Python and R is required, as well as familiarity with the use of IDEs (PyCharm and R Studio).  ImageJ (or Fiji) is helpful for evaluation of generated image stacks.<br />
@@ -77,8 +77,21 @@ Function:<br />
 Function `nX_segmentation` is largely identical to function `nX_segmentation_test`, with the difference that the former does not return `stack`. `nX_segmentation` is therefore faster and is used for batch processing.<br />
 <br /><br />
 
+## 2. Batch analysis of multiple images
+
+**Summary**<br />
+Neurodegeneration experiments require comparison of multiple conditions set up in multiplicates, and processing of many images in batch mode is therefore necessary.
+Both code and sample images are provided for a batch analysis test run.
+Folder `img_ori` contains test images from an axotomy experiment, representing two conditions ('uncut', 'cut'), 3 scenes for each condition, and 7 acquisition time points for each scene, resulting in a total of 2 * 3 * 7 = 42 images.
+time points 
+
+'uncut'  007, 008, 009
+'cut' 010, 011, 012
 
 
+
+
+A set of xample images are provided in folder `img_ori`
 
 
 
