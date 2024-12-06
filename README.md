@@ -2,18 +2,17 @@
 A collection of functions to evaluate the integrity of nerve cell processes (neurites) in microscopy images
 
 ## Description
-For neurons (nerve cells) expressing a fluorescent cytoplasmic marker, the integrity of neurites (axons and dendrites) is quantitatively evaluated, and a score is returned. The code is primarily intended for research laboratories in academia and industry that study neurodegeneration. The codebase is written in Python (version 3.6.7, 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.
-
+For neurons (nerve cells) expressing a fluorescent cytoplasmic marker, the integrity of neurites (axons and dendrites) is evaluated, and a numerical score is returned. The code is primarily intended for research laboratories in academia and industry that study neurodegeneration. The codebase is written in Python (version 3.6.7, 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.<br />
 Image analysis is implemented in Python and includes: image correction; neurite segmentation with computation of the neurite integrity index (NII); and generation of images representing processing intermediates (for parameter optimization).<br />
-Result visualization is implemented in R.<br />
+Visualization of results is implemented in R.<br />
 <br />
-A step-by-step guide is provided that requires knowledge of Python and R, as well as familiarity with the use of IDEs (PyCharm and R Studio).  ImageJ (or Fiji) is helpful for evaluation of generated image stacks.<br />
+A step-by-step guide is provided that requires knowledge of Python and R, as well as familiarity with the use of IDEs (PyCharm and R Studio). ImageJ (or Fiji) is not required but helpful for evaluation of generated image stacks.<br />
 
 
 ## Analysis – first steps
 
 *	Download repository from https://github.com/pmeran/neuriteX/
-*	Open PyCharm, create new project folder 'neuriteX_root_folder/'
+*	Open PyCharm and create new project folder 'neuriteX_root_folder/'
 *	From downloaded repository, transfer folder `img_ori/` and file `neuriteX.py` to created root folder in PyCharm
 *	Open `neuriteX.py` in PyCharm and do the following:<br />
 &nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;To import modules and load methods, run code in `neuriteX.py` from first line all the way down to `END OF METHODS`<br />
@@ -27,12 +26,10 @@ A step-by-step guide is provided that requires knowledge of Python and R, as wel
 
 To get familiar with the analysis pipeline, it is recommended to first analyze single original images (provided in folder `img_ori`) by running code section `# 1. Single image analysis` in `neuriteX.py`.<br /><br />
 Images are analyzed in two sequential steps, using two segmentation filters. The first filter identifies pixels corresponding to peaks in cross-sectional intensity profiles. The second filter examines the local surroundings of pixels identified in the first step, and selects them if they are part of neurites (curvilinear structures) or rejects them if they are part of blebs (small spherical or elliptical structures).<br />
-For each image, a raw numerical score `N_perc` (for neurite percent) is calculated, defined as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks). `N_perc` can be retrieved from variable `D` as `D['N_perc']`, which is returned by functions `nX_segmentation_test()` and `nX_segmentation()` (further explained below).<br /><br />
+For each image, a raw numerical score `N_perc` (for neurite percentage) is calculated, defined as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks). `N_perc` can be retrieved from variable `D`, which is returned by functions `nX_segmentation_test()` and `nX_segmentation()` (further explained below).<br /><br />
 
 **Fig. 1.a&nbsp;&nbsp;Neurite segmentation**<br />
-Images of intact neurites (top left) and degenerated neurites (bottom left) were analyzed using two sequential segmentation filters.<br />
-A raw score for neurite integrity is calculated as the percentage of pixels passing the 2nd filter versus pixels passing the 1st filter.<br />
-Image size 400 x 400 pixels, or 88.4 x 88.4 µm.<br />
+Images of intact neurites (top left) and degenerated neurites (bottom left) were analyzed using two sequential segmentation filters.<br />A raw score for neurite integrity is calculated as the percentage of pixels passing the 2nd filter versus pixels passing the 1st filter.<br />Image edge 400 pixels, or 88.4 µm.<br />
 <img src="neuriteX_Fig.1a.PNG" width="600"/>
 <br /><br />
 **Fig. 1.b&nbsp;&nbsp;Neurite segmentation using simulated images.**<br /><br />
