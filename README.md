@@ -2,7 +2,7 @@
 A collection of functions to evaluate the integrity of nerve cell processes (neurites) in microscopy images
 
 ## Description
-For neurons modified with a fluorescent cytoplasmic marker, a score is computed that reflects the integrity of all neurites (axons and dendrites). The code is primarily intended for research labs in academia and industry that study neurodegeneration. The codebase is written in Python (version 3.6.7, 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.
+For neurons expressing a fluorescent cytoplasmic marker, a score is computed that reflects the integrity of all neurites (axons and dendrites). The code is primarily intended for research labs in academia and industry that study neurodegeneration. The codebase is written in Python (version 3.6.7, 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.
 
 Image analysis is implemented in Python and includes: image correction; neurite segmentation with computation of the neurite integrity index (NII); and generation of images representing processing intermediates (for parameter optimization).<br />
 Result visualization is implemented in R.<br />
@@ -77,14 +77,14 @@ Function:<br />
 Function `nX_segmentation` is largely identical to function `nX_segmentation_test`, with the difference that the former does not return `stack`. `nX_segmentation` is therefore faster and is used for batch processing.<br />
 <br /><br />
 
-## 2. Batch analysis of multiple images
+## 2. Batch processing of multiple images
 
 **Summary**<br />
 Neurodegeneration experiments require comparison of multiple conditions set up in multiplicates. We therefore implemented processing of images in batch mode, and provide both code and sample images for a batch analysis test run.<br />
 Folder `img_ori` contains sample images from a neurodegeneration experiment involving axotomy. The provided images represent two conditions ('uncut', 'cut'), 3 scenes (i.e. imaging areas) per condition, and 7 acquisition time points for each scene, resulting in a total of 2 * 3 * 7 = 42 images. Spreadsheet `df_excel.xlsx` lists all images and their relation to scenes, conditions, and time points. Since the spreadsheet can get quite complex for larger experiments, and is an integral part for creating charts, it should be generated programmatically, as shown (code section `Create excel spreadsheet` in file `neuriteX.py`).<br /><br />
 Code for batch image processing is structured into the following two sections, which should be run sequentially:<br />
-- **1.3&nbsp;&nbsp;Batch processing - image correction**<br />
-- **1.3&nbsp;&nbsp;Batch processing - image segmentation**<br /><br />
+- **2.1&nbsp;&nbsp;Batch processing - image correction**<br />
+- **2.2&nbsp;&nbsp;Batch processing - image segmentation**<br /><br />
 Both modules make use of the same functions used for single image processing.<br /><br />
 Image segmentation is very time intensive, posing challenges for parameter optimization, and resulting in very long run times.<br />
 To facilitate <ins>parameter optimization</ins>, both segmentation functions (`nX_segmentation` and `nX_segmentation_test`) offer the option to minimize the analyzed image area (by tweaking parameters `pUL` = upper left corner, and `eH` = half edge of image area to be analyzed). As a result, setting `eH = 100` takes about 15 seconds; while `eH = 580` takes about 6 minutes to complete.<br />
