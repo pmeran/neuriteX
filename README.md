@@ -17,7 +17,7 @@ The provided step-by-step guide requires knowledge of Python and R and the use o
 -	From downloaded repository, transfer folder `img_ori/` and file `neuriteX.py` to root folder
 -	Open `neuriteX.py` in PyCharm
 -	Run `neuriteX.py` code from first line all the way down to `END OF METHODS`
--	Move to section `# S_1 - single image analysis` and find the following line of code:<br />
+-	Move to section `# 1. Single image analysis` and find the following line of code:<br />
   `path_main = '<path_main>/neuriteX_root_folder/'`<br />
   then replace `<path_main>` with absolute path for root folder<br />
 
@@ -31,8 +31,10 @@ A raw numerical score `N_perc` (for neurite percent) is calculated as the percen
 
 Examples of segmentation performance with real images.<br />
 
-<img src="demo_image_2.PNG" width="800"/>
-<br /><br /><br />
+<img src="neuriteX_Fig.1a.PNG" width="800/>
+<br /><br />
+<img src="neuriteX_Fig.1b.PNG" width="800/>
+<br /><br />
 
 - **1.1&nbsp;&nbsp;&nbsp;Read and display image**<br />
 Read and display image from folder `img_ori/`<br /><br />
