@@ -32,15 +32,15 @@ For each image, a raw numerical score `N_perc` (for neurite percentage) is calcu
 Images of intact neurites (top left) and degenerated neurites (bottom left) were analyzed using two sequential segmentation filters.<br />A raw score for neurite integrity is calculated as the percentage of pixels passing the 2nd filter versus pixels passing the 1st filter.<br />Image edge 400 pixels, or 88.4 µm.<br />
 <img src="neuriteX_Fig.1a.PNG" width="600"/>
 <br /><br />
-**Fig. 1.b&nbsp;&nbsp;Neurite segmentation using simulated images.**<br /><br />
+**Fig. 1.b&nbsp;&nbsp;Neurite segmentation using simulated images**<br /><br />
 <img src="neuriteX_Fig.1b.PNG" width="600"/>
 <br /><br />
 
 Details for modules in section `#1. Single image analysis` in `neuriteX.py`:<br />
 - **1.1&nbsp;&nbsp;Display image**<br />
-Read and display image from folder `img_ori/`<br /><br />
+Display of original images in folder `img_ori/`<br /><br />
 - **1.2&nbsp;&nbsp;Image correction**<br />
-Reduce noise, adjust brightness, add gamma correction<br /><br />
+Noise reduction, adaptive brightness adjustment, and gamma correction<br /><br />
 Function:<br />
 `imgC, status = nX_correction(imgX, promMin = 5, perc_hi = 95, lim_I_new = 200, gamma = 0.8, win = 3, ord = 2)`<br /><br />
 Returns:<br />
@@ -55,7 +55,7 @@ Parameters:<br />
 `win`	window size for Savitzky-Golay noise reduction<br />
 `ord`	order for Savitzky-Golay noise reduction<br /><br />
 - **1.3&nbsp;&nbsp;Image segmentation and generation of test images**<br />
-Generate neurite integrity score, create images of intermediate processing states<br /><br />
+Generation of neurite integrity score, and of images reflecting intermediate processing states<br /><br />
 Function:<br />
 `D, stack = nX_segmentation_test (imgC, img_file, ptUL=(10,10), eH=100, extF = 3, win = 3, ord=2, t = 100000)`<br /><br />
 Returns:<br />
@@ -71,18 +71,18 @@ Parameters:<br />
 `ord`	order for Savitzky-Golay noise reduction<br />
 `t`	number of peak pixels to be selected randomly for image analysis<br /><br />
 - **1.4&nbsp;&nbsp;Image segmentation**<br />
-Generate neurite integrity score<br /><br />
+Generation of neurite integrity score<br /><br />
 Function:<br />
 `D = nX_segmentation (imgC, img_file, ptUL=(10,10), eH=100, extF=3, win=3, ord=2, t=100000)`<br /><br />
-Function `nX_segmentation()` is largely identical to function `nX_segmentation_test()`, with the difference that the former does not return `stack` (a stack of images representing processing intermediates). `nX_segmentation()` is faster and is used for batch processing.<br />
+Function `nX_segmentation()` is largely identical to function `nX_segmentation_test()`, with the difference that the former does not return variable `stack` (a stack of images representing processing intermediates). `nX_segmentation()` is faster and is used for batch processing.<br />
 <br /><br />
 
 ## 2. Batch processing of multiple images
 
 **Summary**<br />
-Neurodegeneration experiments require comparison of multiple conditions set up in multiplicates. We therefore implemented processing of images in batch mode, and provide both code and sample images for a batch analysis test run.<br />
-Folder `img_ori` contains sample images from a neurodegeneration experiment involving axotomy. The provided images represent two conditions ('uncut', 'cut'), 3 scenes (i.e. imaging areas) per condition, and 7 acquisition time points for each scene, resulting in a total of 2 * 3 * 7 = 42 images. Spreadsheet `df_excel.xlsx` lists all images and their relation to scenes, conditions, and time points. Since the spreadsheet can get quite complex for larger experiments, and is an integral part for creating charts, it should be generated programmatically, as shown (code section `Create excel spreadsheet` in file `neuriteX.py`).<br /><br />
-Code for batch image processing is structured into the following two sections, which should be run sequentially:<br />
+Neurodegeneration experiments compare multiple conditions set up in multiplicates over time, and therefore require analysis of large image numbers in batch mode. We provide both code and sample images for a batch analysis test run.<br />
+Folder `img_ori` contains sample images from a neurodegeneration experiment using axotomy. The provided images represent two conditions ('uncut', 'cut'), 3 scenes (i.e. imaging areas) per condition, and 7 acquisition time points for each scene, resulting in a total of 2 * 3 * 7 = 42 images. Spreadsheet `df_excel.xlsx` lists all images and their relation to scenes, conditions, and time points. Since the spreadsheet can get quite complex for larger experiments, and is an integral part for creating charts (described below), it should be generated programmatically, as shown (code section `Create excel spreadsheet` in file `neuriteX.py`).<br /><br />
+Code for batch image processing is structured into the following two sections:<br />
 - **2.1&nbsp;&nbsp;Batch processing - image correction**<br />
 - **2.2&nbsp;&nbsp;Batch processing - image segmentation**
 
