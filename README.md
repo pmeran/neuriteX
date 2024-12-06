@@ -1,5 +1,5 @@
 # neuriteX
-A collection of functions to evaluate the integrity of neuronal processes (neurites) in microscopy images
+A collection of functions to evaluate the integrity of nerve cell processes (neurites) in microscopy images
 
 ## Description
 For neurons modified with a fluorescent cytoplasmic marker, a score is computed that reflects the integrity of all neurites (axons and dendrites). The code is primarily intended for research labs in academia and industry that study neurodegeneration. The codebase is written in Python (version 3.6.7, 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.
@@ -7,7 +7,7 @@ For neurons modified with a fluorescent cytoplasmic marker, a score is computed 
 Image analysis is implemented in Python and includes: image correction; neurite segmentation with computation of raw score, corrected score, and neurite integrity index (NII); and generation of images representing processing intermediates (for optimization of parameters).<br />
 Result visualization is implemented in R.<br />
 <br />
-The provided step-by-step guide requires knowledge of Python and R and the use of IDEs (PyCharm and R Studio).  ImageJ (or Fiji) is not required but is helpful to look at generated image stacks.<br />
+For the provided step-by-step guide, knowledge of Python and R is required, as well as familiarity with the use of IDEs (PyCharm and R Studio).  ImageJ (or Fiji) is helpful for evaluation of generated image stacks.<br />
 
 
 ## Analysis – first steps
@@ -23,23 +23,23 @@ The provided step-by-step guide requires knowledge of Python and R and the use o
 
 ## 1. Single image analysis
 
-Summary<br />
+**Summary**<br />
 
 To get familiar with the analysis pipeline, it is recommended to first analyze single original images (provided in folder `img_ori`) by running code section `# 1. Single image analysis` in `neuriteX.py`.<br /><br />
-In brief, after intensity correction, images are analyzed with two sequential segmentation filters. The first filter identifies pixels corresponding to peaks in cross-sectional intensity profiles. These pixels pass the second filter if - based on examination of their local surroundings - they represent neurites (curvilinear structures) but not blebs (small spherical or elliptical structures).<br />
-A raw numerical score `N_perc` (for neurite percent) is calculated as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks). `N_perc` can be retrieved from output dictionary `D` as `D['N_perc']`.<br />
+Images are analyzed with two segmentation filters. The first filter identifies pixels corresponding to peaks in cross-sectional intensity profiles. These pixels pass the second filter if - based on examination of their local surroundings - they represent neurites (curvilinear structures) but not blebs (small spherical or elliptical structures).<br />
+A raw numerical score `N_perc` (for neurite percent) is calculated as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks). `N_perc` can be retrieved from output dictionary `D` as `D['N_perc']`, returned by functions `nX_segmentation_test` and `nX_segmentation`.<br /><br />
 
-Examples of segmentation performance with real images.<br />
-
-
-<img src="neuriteX_Fig.1a.PNG" width="800"/>
+**Fig. 1.a&nbsp;&nbsp;Segmentation performance with real images.**<br /><br />
+<img src="neuriteX_Fig.1a.PNG" width="600"/>
 <br /><br />
+**Fig. 1.b&nbsp;&nbsp;Segmentation performance with simulated images.**<br /><br />
 <img src="neuriteX_Fig.1b.PNG" width="600"/>
 <br /><br />
 
-- **1.1&nbsp;&nbsp;&nbsp;Read and display image**<br />
+Details for modules in section `#1. Single image analysis` in `neuriteX.py`:<br />
+- **1.1&nbsp;&nbsp;Display image**<br />
 Read and display image from folder `img_ori/`<br /><br />
-- **1.2 Image correction**<br />
+- **1.2&nbsp;&nbsp;Image correction**<br />
 Reduce noise, adjust brightness, add gamma correction<br /><br />
 Function:<br />
 `imgC, status = nX_correction(imgX, promMin = 5, perc_hi = 95, lim_I_new = 200, gamma = 0.8, win = 3, ord = 2)`<br /><br />
@@ -54,7 +54,7 @@ Parameters:<br />
 `gamma`	gamma correction parameter <br />
 `win`	window size for Savitzky-Golay noise reduction<br />
 `ord`	order for Savitzky-Golay noise reduction<br /><br />
-- **1.3 Image segmentation and generation of test images**<br />
+- **1.3&nbsp;&nbsp;Image segmentation and generation of test images**<br />
 Generate neurite integrity score, create images of intermediate processing states<br /><br />
 Function:<br />
 `D, stack = nX_segmentation_test (imgC, img_file, ptUL=(10,10), eH=100, extF = 3, win = 3, ord=2, t = 100000)`<br /><br />
@@ -70,7 +70,7 @@ Parameters:<br />
 `win`	window size for Savitzky-Golay noise reduction<br />
 `ord`	order for Savitzky-Golay noise reduction<br />
 `t`	number of peak pixels to be selected randomly for image analysis<br /><br />
-- **1.4 Image segmentation**<br />
+- **1.4&nbsp;&nbsp;Image segmentation**<br />
 Generate neurite integrity score<br /><br />
 Function:<br />
 `D = nX_segmentation (imgC, img_file, ptUL=(10,10), eH=100, extF=3, win=3, ord=2, t=100000)`<br /><br />
