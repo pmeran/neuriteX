@@ -34,7 +34,7 @@ Examples of segmentation performance with real images.<br />
 
 <img src="neuriteX_Fig.1a.PNG" width="800"/>
 <br /><br />
-<img src="neuriteX_Fig.1b.PNG" width="800"/>
+<img src="neuriteX_Fig.1b.PNG" width="600"/>
 <br /><br />
 
 - **1.1&nbsp;&nbsp;&nbsp;Read and display image**<br />
