@@ -7,7 +7,7 @@ For neurons expressing a fluorescent cytoplasmic marker, a score is computed tha
 Image analysis is implemented in Python and includes: image correction; neurite segmentation with computation of the neurite integrity index (NII); and generation of images representing processing intermediates (for parameter optimization).<br />
 Result visualization is implemented in R.<br />
 <br />
-For the provided step-by-step guide, knowledge of Python and R is required, as well as familiarity with the use of IDEs (PyCharm and R Studio).  ImageJ (or Fiji) is helpful for evaluation of generated image stacks.<br />
+A step-by-step guide is provided that requires knowledge of Python and R, as well as familiarity with the use of IDEs (PyCharm and R Studio).  ImageJ (or Fiji) is helpful for evaluation of generated image stacks.<br />
 
 
 ## Analysis – first steps
@@ -16,10 +16,10 @@ For the provided step-by-step guide, knowledge of Python and R is required, as w
 -	In PyCharm, create new root folder named 'neuriteX_root_folder/'
 -	From downloaded repository, transfer folder `img_ori/` and file `neuriteX.py` to root folder
 -	Open `neuriteX.py` in PyCharm
--	Run `neuriteX.py` code from first line all the way down to `END OF METHODS`
+-	Run `neuriteX.py` code from first line all the way down to `END OF METHODS`, to import modules and load methods
 -	Move to section `# 1. Single image analysis` and find the following line of code:<br />
   `path_main = '<path_main>/neuriteX_root_folder/'`<br />
-  then replace `<path_main>` with absolute path for root folder<br />
+  then replace `<path_main>` with the absolute path for `neuriteX_root folder/`<br />
 
 ## 1. Single image analysis
 
@@ -27,7 +27,7 @@ For the provided step-by-step guide, knowledge of Python and R is required, as w
 
 To get familiar with the analysis pipeline, it is recommended to first analyze single original images (provided in folder `img_ori`) by running code section `# 1. Single image analysis` in `neuriteX.py`.<br /><br />
 Images are analyzed with two segmentation filters. The first filter identifies pixels corresponding to peaks in cross-sectional intensity profiles. These pixels pass the second filter if - based on examination of their local surroundings - they represent neurites (curvilinear structures) but not blebs (small spherical or elliptical structures).<br />
-A raw numerical score `N_perc` (for neurite percent) is calculated as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks). `N_perc` can be retrieved from output dictionary `D` as `D['N_perc']`, returned by functions `nX_segmentation_test` and `nX_segmentation`.<br /><br />
+A raw numerical score `N_perc` (for neurite percent) is calculated as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks). `N_perc` can be retrieved from variable `D` as `D['N_perc']`, which is returned by functions `nX_segmentation_test` and `nX_segmentation`.<br /><br />
 
 **Fig. 1.a&nbsp;&nbsp;Segmentation performance with real images.**<br /><br />
 <img src="neuriteX_Fig.1a.PNG" width="600"/>
