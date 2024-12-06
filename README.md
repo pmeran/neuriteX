@@ -92,6 +92,16 @@ To facilitate <ins>parameter optimization</ins>, both segmentation functions (`n
 <ins>Run times</ins> were considerably shortened by parallelization. To cope with run times of several hours, we successfully ran the code without major tweaks on a Linux compute cluster (sample scripts are given in folder `src_cluster`).<br /><br />
 Batch processing generates a raw neurite integrity score `N_perc` for each image, and stores values in file `df_seg.pkl`.<br /><br />
 
+## 3. Scoring neurite integrity
+This section packages neurite scores into files: N_perc (df_R1.csv), N_perc_corr (df_R2.csv), and NII (file df_R3.csv).<br />
+-**N_perc**<br />
+asdflkj<br />
+-**N_perc_corr**<br />
+asdfasdfooosdf<br />
+-**NII**<br />
+owoekkksooe<br />
+
+
 
 
 
