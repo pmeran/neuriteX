@@ -93,16 +93,18 @@ To facilitate <ins>parameter optimization</ins>, both segmentation functions (`n
 Batch processing generates a raw neurite integrity score `N_perc` for each image, and stores values in file `df_seg.pkl`.<br /><br />
 
 ## 3. Scoring neurite integrity
-This section packages neurite scores into files: N_perc (df_R1.csv), N_perc_corr (df_R2.csv), and NII (file df_R3.csv).<br />
--**N_perc**<br />
-asdflkj<br />
--**N_perc_corr**<br />
-asdfasdfooosdf<br />
--**NII**<br />
-owoekkksooe<br />
+This section merges experiment information in df_excel.xlsx with neurite integrity scores: N_perc (df_R1.csv), N_perc_corr (df_R2.csv), and NII (file df_R3.csv).<br />
+- **N_perc**<br />
+N_perc is a raw score of neurite integrity, defined as the percentage of neurite pixels (2nd filter) versus cross-sectional peaks (1st filter) (Fig. 1a, 2). N_perc normalizes for area and overall image complexity.<br />
+- **N_perc_corr**<br />
+N_perc_corr results from correction of N_perc, which to some extent is affected by background variability.<br />
+- **NII**<br />
+The neurite integrity index (NII) results from normalization of N_perc_corr, using the earliest time point (4 h or earlier) of N_perc_corr as reference.<br />
 <br />
-<br />
-<img src="neuriteX_Fig.3.PNG" width="600"/>
+Charts for all three scores are generated with neuriteX_
+
+
+<img src="neuriteX_Fig.3.PNG" width="800"/>
 
 
 
