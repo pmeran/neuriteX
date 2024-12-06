@@ -94,26 +94,16 @@ To facilitate <ins>parameter optimization</ins>, both segmentation functions `nX
 Batch processing generates a raw neurite integrity score `N_perc` for each image, and stores values in file `df_seg.pkl`.<br /><br />
 
 ## 3. Merging neurite integrity scores with experimental metadata
-This section merges various neurite integrity scores with information about experimental conditions file `df_excel.xlsx`.<br />
+This section merges various neurite integrity scores and experimental conditions into several .csv output files.<br />
+<img src="neuriteX_Tab.3.PNG" width="800"/><br /><br />
 
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
-
-
-
-with variouis neurite integrity scores.
-Three different neurite integrity scores - `N_perc`, `N_perc_corr`, and `NII` - 
-
-
-ion about experimental conditions ity scores in dataframe `df_seg` for all images with file `df_excel.xlsx` with neurite integrity scores: N_perc (df_R1.csv), N_perc_corr (df_R2.csv), and NII (file df_R3.csv).<br />
-- **N_perc**<br />
+- **3.1 N_perc**<br />
 N_perc is a raw score of neurite integrity, defined as the percentage of neurite pixels (2nd filter) versus cross-sectional peaks (1st filter) (Fig. 1a, Fig. 1b). N_perc normalizes for area and overall image complexity.<br />
-- **N_perc_corr**<br />
-N_perc_corr results from correction of N_perc, which to some extent is affected by background variability.<br />
-- **NII**<br />
+- **3.2 N_perc_corr**<br />
+N_perc_corr is a corrected version of N_perc, which to some extent is affected by background variability.<br />
+- **3.3 NII (neurite integrity index)**<br />
 The neurite integrity index (NII) results from normalization of N_perc_corr, using the earliest time point (4 h or earlier) of N_perc_corr as reference.<br />
+NII values cluster around 1.0 for intact neurites, and move closer to 0 as neurites degenerate.<br />
 <br />
 Charts for all three scores are generated with neuriteX.R, taking files df_R1.csv, df_R2.csv, and df_R3.csv as input.<br />
 <br />
