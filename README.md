@@ -101,9 +101,8 @@ N_perc_corr results from correction of N_perc, which to some extent is affected 
 - **NII**<br />
 The neurite integrity index (NII) results from normalization of N_perc_corr, using the earliest time point (4 h or earlier) of N_perc_corr as reference.<br />
 <br />
-Charts for all three scores are generated with neuriteX_
-
-
+Charts for all three scores are generated with neuriteX.R, taking files df_R1.csv, df_R2.csv, and df_R3.csv as input.<br />
+<br />
 <img src="neuriteX_Fig.3.PNG" width="800"/>
 
 
