@@ -26,7 +26,7 @@ Images are analyzed in two sequential steps, using two segmentation filters. The
 For each image, a raw numerical score `N_perc` (for neurite percentage) is calculated, defined as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks) (Fig. 1a and 1b). `N_perc` can be retrieved from variable `D`, which is returned by functions `nX_segmentation_test()` and `nX_segmentation()` (further explained below).<br /><br />
 
 **Fig. 1.a&nbsp;&nbsp;Image segmentation**<br />
-Images of intact neurites (top left) and degenerated neurites (bottom left) were analyzed using two sequential segmentation filters.<br />`N_perc`, a raw score for neurite integrity, is calculated as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks).<br />Image edge 400 pixels, or 88.4 µm.<br />
+Images of intact neurites (top left) and degenerated neurites (bottom left) were analyzed using two sequential segmentation filters.<br />`N_perc`, a raw score for neurite integrity, is calculated as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks). Image edge 400 pixels, or 88.4 µm.<br />
 <img src="neuriteX_Fig.1a.PNG" width="600"/>
 <br /><br />
 **Fig. 1.b&nbsp;&nbsp;Image segmentation using simulated images**<br />
