@@ -26,7 +26,7 @@ Images are analyzed in two sequential steps, using two segmentation filters. The
 For each image, a raw numerical score `N_perc` (for neurite percentage) is calculated, defined as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks) (Fig. 1a and 1b). `N_perc` can be retrieved from variable `D`, which is returned by functions `nX_segmentation_test()` and `nX_segmentation()` (further explained below).<br /><br />
 
 **Fig. 1.a&nbsp;&nbsp;Image segmentation**<br />
-Images of intact neurites (top left) and degenerated neurites (bottom left) were analyzed using two sequential segmentation filters.<br />A raw score for neurite integrity is calculated as the percentage of pixels passing the 2nd filter versus pixels passing the 1st filter.<br />Image edge 400 pixels, or 88.4 µm.<br />
+Images of intact neurites (top left) and degenerated neurites (bottom left) were analyzed using two sequential segmentation filters.<br />`N_perc`, a raw score for neurite integrity, is calculated as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks).<br />Image edge 400 pixels, or 88.4 µm.<br />
 <img src="neuriteX_Fig.1a.PNG" width="600"/>
 <br /><br />
 **Fig. 1.b&nbsp;&nbsp;Image segmentation using simulated images**<br />
@@ -56,7 +56,7 @@ Generation of neurite integrity score, and of images reflecting intermediate pro
 Function:<br />
 `D, stack = nX_segmentation_test (imgC, img_file, ptUL=(10,10), eH=100, extF = 3, win = 3, ord=2, t = 100000)`<br /><br />
 Returns:<br />
-`D`	dictionary with output `N_perc`, the percentage of neurite pixels among all peak pixels<br />
+`D`	dictionary with key `N_perc`, the percentage of neurite pixels among pixels corresponding to cross-sectional profile peaks<br />
 `stack`	stack of images representing various stages of analysis (for parameter adjustments)<br /><br />
 Parameters:<br />
 `imgC`	(corrected) input image (numpy array, 1196 x 1196, np.uint8)<br />
