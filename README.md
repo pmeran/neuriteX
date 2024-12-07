@@ -92,7 +92,7 @@ Batch processing generates a raw neurite integrity score `N_perc` for each image
 This section merges various neurite integrity scores and experimental conditions into .csv output files.<br />
 <img src="neuriteX_Tab.3.PNG" width="800"/><br /><br />
 
-**Definition of neurite integrity scores N_perc, N_perc_corr, and NII**<br />
+**Definition of neurite integrity scores N_perc, N_perc_corr, and NII (neurite integrity index)**<br />
 - **N_perc**<br />
 N_perc is a raw score of neurite integrity, defined as the percentage of neurite pixels (2nd filter) versus cross-sectional peaks (1st filter) (Fig. 1a, Fig. 1b). N_perc normalizes for area and overall image complexity.<br />
 - **N_perc_corr**<br />
