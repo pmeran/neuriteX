@@ -94,7 +94,7 @@ This section merges various neurite integrity scores and experimental conditions
 
 **Definition of neurite integrity scores N_perc, N_perc_corr, and NII (neurite integrity index)**<br />
 - **N_perc**<br />
-N_perc is a raw score of neurite integrity, defined as the percentage of neurite pixels (2nd filter) versus cross-sectional peaks (1st filter) (Fig. 1a, Fig. 1b). N_perc normalizes for area and overall image complexity.<br />
+N_perc is a raw score of neurite integrity, defined as the percentage of neurite pixels (2nd filter) versus cross-sectional peaks (1st filter) (Fig. 1a, Fig. 1b). N_perc normalizes implicitly for area and overall image complexity.<br />
 - **N_perc_corr**<br />
 N_perc_corr is a corrected version of N_perc, which sometimes is affected by background variability within the same condition or well.<br />
 - **NII (neurite integrity index)**<br />
