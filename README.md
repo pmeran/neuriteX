@@ -84,7 +84,7 @@ Code for batch image processing makes use of the same functions used for single 
 - **2.2&nbsp;&nbsp;Batch processing - image segmentation**
 
 Image segmentation is very time intensive, posing challenges for parameter optimization and resulting in very long run times.<br />
-To facilitate <ins>parameter optimization</ins>, both segmentation functions `nX_segmentation()` and `nX_segmentation_test()` offer the option to minimize the analyzed image area (by tweaking parameters `pUL` = upper left corner, and `eH` = half edge of image area to be analyzed). As a result, setting `eH = 100` takes about 15 seconds; while `eH = 580` takes about 6 minutes to complete.<br />
+To facilitate <ins>parameter optimization</ins>, both segmentation functions `nX_segmentation()` and `nX_segmentation_test()` offer the option to minimize the analyzed image area (by tweaking parameters `pUL` = upper left corner, and `eH` = half edge of image area to be analyzed). As a result, setting `eH = 100` takes about 15 seconds, while `eH = 580` takes about 6 minutes to complete.<br />
 <ins>Run times</ins> were considerably shortened by parallelization. To cope with run times of several hours, we successfully ran the code without major tweaks on a Linux compute cluster (sample scripts are given in folder `src_cluster`).<br /><br />
 Batch processing generates a raw neurite integrity score `N_perc` for each image, and stores values in file `df_seg.pkl`.<br /><br />
 
