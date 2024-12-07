@@ -105,7 +105,7 @@ Depending on the experimental details, different ways of correction and normaliz
 
 ## 4. Visualization of neurite integrity scores (R)
 Script `neuriteX.R` generates charts for neurite integrity scores N_perc, N_perc_corr, and NII (Fig. 3), based on data in previously generated files `df_R1.csv`, `df_R2.csv`, and `df_R3.csv`.<br /><br />
-<img src="neuriteX_Fig.3.PNG" width="900"/>
+<img src="figures/neuriteX_Fig.3.PNG" width="900"/>
 
 
 
