@@ -7,7 +7,7 @@ For neurons (nerve cells) expressing a fluorescent marker, the integrity of neur
 <ins>Image analysis</ins> is implemented in Python and includes: image correction; neurite segmentation with computation of the neurite integrity index (NII); and generation of images representing processing intermediates (for parameter optimization).<br /><br />
 <ins>Visualization of results</ins> is implemented in R.<br />
 <br />
-The provided step-by-step guide requires knowledge of Python and R, as well as familiarity with the use of IDEs (PyCharm and R Studio). ImageJ (or Fiji) is not required but helpful for evaluation of generated image stacks.<br />
+The provided step-by-step guide requires knowledge of Python and R, and of related IDEs (PyCharm and R Studio). ImageJ (or Fiji) is not required but helpful for evaluation of generated image stacks.<br />
 
 
 ## Analysis – first steps
@@ -110,7 +110,7 @@ It should be emphasized that, depending on the experimental details, different w
 <br />
 
 ## 4. Visualization of neurite integrity scores (R)
-Script neuriteX.R generates charts for neurite integrity scores N_perc, N_perc_corr, and NII (Fig. 3). Charts are based on files df_R1.csv, df_R2.csv, and df_R3.csv, respectively.
+Script neuriteX.R generates charts for neurite integrity scores N_perc, N_perc_corr, and NII (Fig. 3). Charts are created based on files df_R1.csv, df_R2.csv, and df_R3.csv, respectively.
 <br />
 <img src="neuriteX_Fig.3.PNG" width="1000"/>
 
