@@ -2,7 +2,7 @@
 A collection of functions to quantify degeneration of nerve cell processes (neurites) in microscopy images
 
 ## Description
-For nerve cells expressing a fluorescent marker, the integrity of neurites (axons and dendrites) is evaluated, and a numerical score is returned. The code is primarily intended for research laboratories in academia and industry that study neurodegeneration.<br /><br />
+For nerve cells expressing a fluorescent marker, the integrity of neurites (axons and dendrites) is evaluated, and a numerical score is returned. The code is primarily intended for research laboratories studying neurodegeneration.<br /><br />
 The provided step-by-step guide requires knowledge of Python and R, and of related IDEs (PyCharm and R Studio). ImageJ (or Fiji) is not required but helpful for evaluation of generated image stacks.<br /><br />
 <img src="neuriteX_Tab.0.PNG" width="900"/>
 <br /><br />
