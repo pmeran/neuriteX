@@ -2,7 +2,7 @@
 A collection of functions to quantify degeneration of nerve cell processes (neurites) in microscopy images
 
 ## Description
-For neurons (nerve cells) expressing a fluorescent marker, the integrity of neurites (axons and dendrites) is evaluated, and a numerical score is returned. The code is primarily intended for research laboratories in academia and industry that study neurodegeneration. The codebase is written in Python (version 3.6.7, 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.<br />
+For nerve cells expressing a fluorescent marker, the integrity of neurites (axons and dendrites) is evaluated, and a numerical score is returned. The code is primarily intended for research laboratories in academia and industry that study neurodegeneration. The codebase is written in Python (version 3.6.7, 3.7.9) and R (version 4.4.1) and has been tested in Windows 10.<br />
 <br />
 <ins>Image analysis</ins> is implemented in Python and includes: image correction; neurite segmentation with computation of the neurite integrity index (NII); and generation of images representing processing intermediates (for parameter optimization).<br /><br />
 <ins>Visualization of results</ins> is implemented in R.<br />
