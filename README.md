@@ -52,7 +52,7 @@ Parameters:<br />
 `win`	window size for Savitzky-Golay noise reduction<br />
 `ord`	order for Savitzky-Golay noise reduction<br /><br />
 - **1.3&nbsp;&nbsp;Neurite segmentation and generation of test images**<br />
-Generation of neurite integrity score, and of images reflecting intermediate processing states<br /><br />
+Generation of neurite integrity score `N_perc`, and of images representing processing intermediates (output variable `stack`)<br /><br />
 Function:<br />
 `D, stack = nX_segmentation_test (imgC, img_file, ptUL=(10,10), eH=100, extF = 3, win = 3, ord=2, t = 100000)`<br /><br />
 Returns:<br />
@@ -71,7 +71,7 @@ Parameters:<br />
 Generation of neurite integrity score<br /><br />
 Function:<br />
 `D = nX_segmentation (imgC, img_file, ptUL=(10,10), eH=100, extF=3, win=3, ord=2, t=100000)`<br /><br />
-Function `nX_segmentation()` is largely identical to function `nX_segmentation_test()`, with the difference that the former does not return variable `stack` (a stack of images representing processing intermediates). `nX_segmentation()` is faster and is used for batch processing.<br />
+Function `nX_segmentation()` is largely identical to function `nX_segmentation_test()`, with the difference that `nX_segmentation()` does not return variable `stack` (a stack of images representing processing intermediates). `nX_segmentation()` is therefore faster and is used for batch processing.<br />
 <br /><br />
 
 ## 2. Batch processing of multiple images (Python)
