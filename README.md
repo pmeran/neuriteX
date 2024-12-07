@@ -27,10 +27,10 @@ For each image, a raw numerical score `N_perc` (for neurite percentage) is calcu
 
 **Fig. 1.a&nbsp;&nbsp;Image segmentation**<br />
 Images of intact neurites (top left) and degenerated neurites (bottom left) were analyzed using two sequential segmentation filters.<br />`N_perc`, a raw score for neurite integrity, is calculated as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks). Image edge 400 pixels, or 88.4 µm.<br />
-<img src="figures/neuriteX_Fig.1a.PNG" width="600"/>
+<img src="figures/neuriteX_Fig.1a.PNG" width="800"/>
 <br /><br />
 **Fig. 1.b&nbsp;&nbsp;Image segmentation using simulated images**<br />
-<img src="figures/neuriteX_Fig.1b.PNG" width="600"/>
+<img src="figures/neuriteX_Fig.1b.PNG" width="800"/>
 <br /><br />
 
 **Details for code modules in section `#1. Single image analysis`:**<br />
