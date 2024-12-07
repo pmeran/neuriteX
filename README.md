@@ -104,7 +104,7 @@ Depending on the experimental details, different ways of correction and normaliz
 <br />
 
 ## 4. Visualization of neurite integrity scores (R)
-Script `neuriteX.R` requires files `df_R1.csv`, `df_R2.csv`, and `df_R3.csv` (see above) to generates charts for neurite integrity scores N_perc, N_perc_corr, and NII (Fig. 3).<br />
+Script `neuriteX.R` requires files `df_R1.csv`, `df_R2.csv`, and `df_R3.csv` (created above) to generates charts for neurite integrity scores N_perc, N_perc_corr, and NII (Fig. 3).<br />
 <br /><br />
 <img src="neuriteX_Fig.3.PNG" width="600"/>
 
