@@ -59,7 +59,7 @@ Returns:<br />
 `D`	dictionary with key `N_perc`, the percentage of neurite pixels among pixels corresponding to cross-sectional profile peaks<br />
 `stack`	stack of images representing various stages of analysis (for parameter adjustments); best viewed with ImageJ (Fiji)<br /><br />
 Parameters:<br />
-`imgC`	(corrected) input image (numpy array, 1196 x 1196, np.uint8)<br />
+`imgC`	corrected input image (numpy array, 1196 x 1196, np.uint8)<br />
 `img_file`	filename of original image<br />
 `ptUL`	upper left anchor of image area to be analyzed<br />
 `eH`	half edge length of image area to be analyzed<br />
