@@ -10,8 +10,8 @@ The provided step-by-step guide requires knowledge of Python and R, and of relat
 ## Analysis – first steps
 
 *	Download repository from https://github.com/pmeran/neuriteX/
-*	Open PyCharm and create new project folder 'neuriteX_root_folder/'
-*	From downloaded repository, transfer folder `img_ori/` and file `neuriteX.py` to root folder created in PyCharm
+*	Open PyCharm and create new project folder 'neuriteX_project_folder/'
+*	From downloaded repository, transfer folder `img_ori/` and file `neuriteX.py` to project folder created in PyCharm
 *	Open `neuriteX.py` in PyCharm and do the following:<br />
 &nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;To import modules and load methods, run code in `neuriteX.py` from first line all the way down to `END OF METHODS`<br />
 &nbsp;&nbsp;o&nbsp;&nbsp;&nbsp;Move to section `# 1. Single image analysis` and find the following line of code:<br />
