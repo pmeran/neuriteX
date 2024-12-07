@@ -101,16 +101,16 @@ This section merges various neurite integrity scores and experimental conditions
 - **N_perc**<br />
 N_perc is a raw score of neurite integrity, defined as the percentage of neurite pixels (2nd filter) versus cross-sectional peaks (1st filter) (Fig. 1a, Fig. 1b). N_perc normalizes for area and overall image complexity.<br />
 - **N_perc_corr**<br />
-N_perc_corr is a corrected version of N_perc, which to some extent is affected by background variability.<br />
+N_perc_corr is a corrected version of N_perc, which sometimes is affected by background variability within the same condition or well.<br />
 - **NII (neurite integrity index)**<br />
 The neurite integrity index (NII) results from normalization of N_perc_corr, using the earliest time point (4 h or earlier) of N_perc_corr as reference.<br />
 NII values cluster around 1.0 for intact neurites, and move closer to 0 as neurites degenerate.<br />
 <br />
-It should be emphasized that, depending on the experimental details, different ways of correction and normalization may be required (e.g. if acquiring images over time from the same area is not possible; or imaging can only be started after significant neurite degeneration has set in)<br />
+It should be emphasized that, depending on the experimental details, different ways of correction and normalization may be required (e.g. if acquiring images over time from the same area is not possible; or imaging can only be started after significant neurite degeneration has set in for the axotomized condition)<br />
 <br />
 
 ## 4. Visualization of neurite integrity scores (R)
-Script neuriteX.R generates charts for neurite integrity scores N_perc, N_perc_corr, and NII (Fig. 3). Charts are created based on files df_R1.csv, df_R2.csv, and df_R3.csv, respectively.
+Script neuriteX.R generates charts for neurite integrity scores N_perc, N_perc_corr, and NII (Fig. 3). The code in R requires files df_R1.csv, df_R2.csv, and df_R3.csv.
 <br />
 <img src="neuriteX_Fig.3.PNG" width="1000"/>
 
