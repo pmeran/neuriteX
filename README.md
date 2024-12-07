@@ -25,7 +25,7 @@ The provided step-by-step guide requires knowledge of Python and R, and of relat
 
 **Summary**<br />
 
-To get familiar with the analysis pipeline, it is recommended to first analyze single original images (provided in folder `img_ori`) by running code section `# 1. Single image analysis` in `neuriteX.py`.<br /><br />
+To get familiar with the analysis pipeline, it is recommended to first analyze single original images (provided in folder `img_ori/`) by running code section `# 1. Single image analysis` in `neuriteX.py`.<br /><br />
 Images are analyzed in two sequential steps, using two segmentation filters. The first filter identifies pixels corresponding to peaks in cross-sectional intensity profiles. The second filter examines the local surroundings of pixels identified in the first step, and selects them if they are part of neurites (curvilinear structures) or rejects them if they are part of blebs (small spherical or elliptical structures).<br />
 For each image, a raw numerical score `N_perc` (for neurite percentage) is calculated, defined as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks). `N_perc` can be retrieved from variable `D`, which is returned by functions `nX_segmentation_test()` and `nX_segmentation()` (further explained below).<br /><br />
 
