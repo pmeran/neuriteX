@@ -68,7 +68,7 @@ Parameters:<br />
 `ord`	order for Savitzky-Golay noise reduction<br />
 `t`	number of peak pixels to be selected randomly for image analysis<br /><br />
 - **1.4&nbsp;&nbsp;Neurite segmentation**<br />
-Generation of neurite integrity score<br /><br />
+Generation of neurite integrity score `N_perc`<br /><br />
 Function:<br />
 `D = nX_segmentation (imgC, img_file, ptUL=(10,10), eH=100, extF=3, win=3, ord=2, t=100000)`<br /><br />
 Function `nX_segmentation()` is largely identical to function `nX_segmentation_test()`, with the difference that `nX_segmentation()` does not return variable `stack` (a stack of images representing processing intermediates). `nX_segmentation()` is therefore faster and is used for batch processing.<br />
