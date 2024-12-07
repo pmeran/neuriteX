@@ -30,7 +30,7 @@ Images of intact neurites (top left) and degenerated neurites (bottom left) were
 <img src="figures/neuriteX_Fig.1a.PNG" width="600"/>
 <br /><br />
 **Fig. 1.b&nbsp;&nbsp;Image segmentation using simulated images**<br />
-<img src="neuriteX_Fig.1b.PNG" width="600"/>
+<img src="figures/neuriteX_Fig.1b.PNG" width="600"/>
 <br /><br />
 
 **Details for code modules in section `#1. Single image analysis`:**<br />
@@ -90,7 +90,7 @@ Batch processing generates a raw neurite integrity score `N_perc` for each image
 
 ## 3. Merging neurite integrity scores with experimental metadata (Python)
 This section merges various neurite integrity scores and experimental conditions into .csv output files.<br />
-<img src="neuriteX_Tab.3.PNG" width="800"/><br /><br />
+<img src="figures/neuriteX_Tab.3.PNG" width="800"/><br /><br />
 
 **Definition of neurite integrity scores N_perc, N_perc_corr, and NII (neurite integrity index)**<br />
 - **N_perc**<br />
@@ -105,7 +105,7 @@ Depending on the experimental details, different ways of correction and normaliz
 
 ## 4. Visualization of neurite integrity scores (R)
 Script `neuriteX.R` generates charts for neurite integrity scores N_perc, N_perc_corr, and NII (Fig. 3), based on data in previously generated files `df_R1.csv`, `df_R2.csv`, and `df_R3.csv`.<br /><br />
-<img src="neuriteX_Fig.3.PNG" width="600"/>
+<img src="figures/neuriteX_Fig.3.PNG" width="600"/>
 
 
 
