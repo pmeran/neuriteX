@@ -20,8 +20,7 @@ The provided step-by-step guide requires knowledge of Python and R, and of relat
 
 ## 1. Single image analysis (Python)
 
-**Summary**<br />
-
+**Summary**<br /><br />
 To get familiar with the analysis pipeline, it is recommended to first analyze single original images (provided in folder `img_ori/`) by running code section `# 1. Single image analysis` in `neuriteX.py`.<br /><br />
 Images are analyzed in two sequential steps, using two segmentation filters. The first filter identifies pixels corresponding to peaks in cross-sectional intensity profiles. The second filter examines the local surroundings of pixels identified in the first step, and selects them if they are part of neurites (curvilinear structures) or rejects them if they are part of blebs (small spherical or elliptical structures).<br />
 For each image, a raw numerical score `N_perc` (for neurite percentage) is calculated, defined as the percentage of pixels passing the 2nd filter (neurites) versus pixels passing the 1st filter (peaks). `N_perc` can be retrieved from variable `D`, which is returned by functions `nX_segmentation_test()` and `nX_segmentation()` (further explained below).<br /><br />
@@ -34,7 +33,7 @@ Images of intact neurites (top left) and degenerated neurites (bottom left) were
 <img src="neuriteX_Fig.1b.PNG" width="600"/>
 <br /><br />
 
-**Details for modules in section `#1. Single image analysis` in `neuriteX.py`:**<br />
+**Details for code modules in section `#1. Single image analysis`:**<br />
 - **1.1&nbsp;&nbsp;Image display**<br />
 Display of original images in folder `img_ori/`<br /><br />
 - **1.2&nbsp;&nbsp;Image correction**<br />
@@ -77,14 +76,13 @@ Function `nX_segmentation()` is largely identical to function `nX_segmentation_t
 
 ## 2. Batch processing of multiple images (Python)
 
-**Summary**<br />
-Neurodegeneration experiments compare multiple conditions set up in multiplicates over time, and therefore require analysis of large image numbers in batch mode. We provide both code and sample images for a batch analysis test run.<br />
-Folder `img_ori` contains sample images from a neurodegeneration experiment using axotomy. The provided images represent two conditions ('uncut', 'cut'), 3 scenes (i.e. imaging areas) per condition, and 7 acquisition time points for each scene, resulting in a total of 2 * 3 * 7 = 42 images. Spreadsheet `df_excel.xlsx` lists all images and their relation to scenes, conditions, and time points. Since the spreadsheet can get quite complex for larger experiments, and is an integral part for creating charts (described below), it should be generated programmatically, as shown (code section `Create excel spreadsheet` in file `neuriteX.py`).<br /><br />
-Code for batch image processing is structured into the following two sections:<br />
+**Summary**<br /><br />
+In neurodegeneration experiments, conditions are set up in multiplicates and imaged over time, resulting in large image sets that must be analyzed in batch mode. We provide both code and sample images for a batch analysis test run.<br />
+Folder `img_ori` contains sample images from a neurodegeneration experiment using axotomy. The provided images represent two conditions ('uncut', 'cut'), 3 scenes (i.e. imaging areas) per condition, and 7 acquisition time points for each scene, resulting in a total of 2 * 3 * 7 = 42 images. Spreadsheet `df_excel.xlsx` lists all images and their relation to scenes, conditions, and time points. Since the spreadsheet can get quite complex for larger experiments, and is an integral part for creating charts (described below), it should be generated programmatically, as shown in code section `Create excel spreadsheet`(`neuriteX.py`).<br /><br />
+Code for batch image processing makes use of the same functions used for single image processing, and is structured into the following two sections:<br />
 - **2.1&nbsp;&nbsp;Batch processing - image correction**<br />
 - **2.2&nbsp;&nbsp;Batch processing - image segmentation**
 
-Both modules make use of the same functions used for single image processing.<br /><br />
 Image segmentation is very time intensive, posing challenges for parameter optimization and resulting in very long run times.<br />
 To facilitate <ins>parameter optimization</ins>, both segmentation functions `nX_segmentation()` and `nX_segmentation_test()` offer the option to minimize the analyzed image area (by tweaking parameters `pUL` = upper left corner, and `eH` = half edge of image area to be analyzed). As a result, setting `eH = 100` takes about 15 seconds; while `eH = 580` takes about 6 minutes to complete.<br />
 <ins>Run times</ins> were considerably shortened by parallelization. To cope with run times of several hours, we successfully ran the code without major tweaks on a Linux compute cluster (sample scripts are given in folder `src_cluster`).<br /><br />
