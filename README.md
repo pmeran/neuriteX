@@ -98,8 +98,7 @@ N_perc is a raw score of neurite integrity, defined as the percentage of neurite
 - **N_perc_corr**<br />
 N_perc_corr is a corrected version of N_perc, which sometimes is affected by background variability within the same condition or well.<br />
 - **NII (neurite integrity index)**<br />
-The neurite integrity index (NII) results from normalization of N_perc_corr, using the earliest time point (4 h or earlier) of N_perc_corr as reference.<br />
-NII values cluster around 1.0 for intact neurites, and move closer to 0 as neurites degenerate.<br />
+The neurite integrity index (NII) results from normalization of N_perc_corr, using the earliest time point (4 h or earlier) of N_perc_corr as reference. NII values cluster around 1.0 for intact neurites, and move closer to 0 as neurites degenerate.<br />
 <br />
 Depending on the experimental details, different ways of correction and normalization may be required (e.g. if acquiring images over time from the same area is not possible; or imaging can only be started after significant neurite degeneration has set in for the axotomized condition)<br />
 <br />
