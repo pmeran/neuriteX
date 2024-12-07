@@ -55,7 +55,7 @@ Parameters:<br />
 `gamma`	gamma correction parameter <br />
 `win`	window size for Savitzky-Golay noise reduction<br />
 `ord`	order for Savitzky-Golay noise reduction<br /><br />
-- **1.3&nbsp;&nbsp;Image segmentation and generation of test images**<br />
+- **1.3&nbsp;&nbsp;Neurite segmentation and generation of test images**<br />
 Generation of neurite integrity score, and of images reflecting intermediate processing states<br /><br />
 Function:<br />
 `D, stack = nX_segmentation_test (imgC, img_file, ptUL=(10,10), eH=100, extF = 3, win = 3, ord=2, t = 100000)`<br /><br />
@@ -71,7 +71,7 @@ Parameters:<br />
 `win`	window size for Savitzky-Golay noise reduction<br />
 `ord`	order for Savitzky-Golay noise reduction<br />
 `t`	number of peak pixels to be selected randomly for image analysis<br /><br />
-- **1.4&nbsp;&nbsp;Image segmentation**<br />
+- **1.4&nbsp;&nbsp;Neurite segmentation**<br />
 Generation of neurite integrity score<br /><br />
 Function:<br />
 `D = nX_segmentation (imgC, img_file, ptUL=(10,10), eH=100, extF=3, win=3, ord=2, t=100000)`<br /><br />
