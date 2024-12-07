@@ -21,7 +21,7 @@ The provided step-by-step guide requires knowledge of Python and R, as well as f
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`path_main = '<path_main>/neuriteX_root_folder/'`<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;then replace `<path_main>` with the absolute path for `neuriteX_root_folder/`<br />
 
-## 1. Single image analysis
+## 1. Single image analysis (Python)
 
 **Summary**<br />
 
@@ -78,7 +78,7 @@ Function:<br />
 Function `nX_segmentation()` is largely identical to function `nX_segmentation_test()`, with the difference that the former does not return variable `stack` (a stack of images representing processing intermediates). `nX_segmentation()` is faster and is used for batch processing.<br />
 <br /><br />
 
-## 2. Batch processing of multiple images
+## 2. Batch processing of multiple images (Python)
 
 **Summary**<br />
 Neurodegeneration experiments compare multiple conditions set up in multiplicates over time, and therefore require analysis of large image numbers in batch mode. We provide both code and sample images for a batch analysis test run.<br />
@@ -93,24 +93,26 @@ To facilitate <ins>parameter optimization</ins>, both segmentation functions `nX
 <ins>Run times</ins> were considerably shortened by parallelization. To cope with run times of several hours, we successfully ran the code without major tweaks on a Linux compute cluster (sample scripts are given in folder `src_cluster`).<br /><br />
 Batch processing generates a raw neurite integrity score `N_perc` for each image, and stores values in file `df_seg.pkl`.<br /><br />
 
-## 3. Merging neurite integrity scores with experimental metadata
+## 3. Merging neurite integrity scores with experimental metadata (Python)
 This section merges various neurite integrity scores and experimental conditions into several .csv output files.<br />
 <img src="neuriteX_Tab.3.PNG" width="800"/><br /><br />
 
-- **3.1 N_perc**<br />
+**Definition of neurite integrity scores N_perc, N_perc_corr, and NII**<br />
+- **N_perc**<br />
 N_perc is a raw score of neurite integrity, defined as the percentage of neurite pixels (2nd filter) versus cross-sectional peaks (1st filter) (Fig. 1a, Fig. 1b). N_perc normalizes for area and overall image complexity.<br />
-- **3.2 N_perc_corr**<br />
+- **N_perc_corr**<br />
 N_perc_corr is a corrected version of N_perc, which to some extent is affected by background variability.<br />
-- **3.3 NII (neurite integrity index)**<br />
+- **NII (neurite integrity index)**<br />
 The neurite integrity index (NII) results from normalization of N_perc_corr, using the earliest time point (4 h or earlier) of N_perc_corr as reference.<br />
 NII values cluster around 1.0 for intact neurites, and move closer to 0 as neurites degenerate.<br />
 <br />
-Charts for all three scores are generated with neuriteX.R, taking files df_R1.csv, df_R2.csv, and df_R3.csv as input.<br />
+It should be emphasized that, depending on the experimental details, different ways of correction and normalization may be required (e.g. if acquiring images over time from the same area is not possible; or imaging can only be started after significant neurite degeneration has set in)<br />
 <br />
 
-## 4. Visualization of neurite integrity scores.
+## 4. Visualization of neurite integrity scores (R)
+Script neuriteX.R generates charts for neurite integrity scores N_perc, N_perc_corr, and NII (Fig. 3). Charts are based on files df_R1.csv, df_R2.csv, and df_R3.csv, respectively.
 <br />
-<img src="neuriteX_Fig.3.PNG" width="800"/>
+<img src="neuriteX_Fig.3.PNG" width="1000"/>
 
 
 
