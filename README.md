@@ -101,7 +101,7 @@ N_perc_corr is a corrected version of N_perc, which sometimes is affected by bac
 The neurite integrity index (NII) results from normalization of N_perc_corr, using the earliest time point (4 h or earlier) of N_perc_corr as reference.<br />
 NII values cluster around 1.0 for intact neurites, and move closer to 0 as neurites degenerate.<br />
 <br />
-It should be emphasized that, depending on the experimental details, different ways of correction and normalization may be required (e.g. if acquiring images over time from the same area is not possible; or imaging can only be started after significant neurite degeneration has set in for the axotomized condition)<br />
+Depending on the experimental details, different ways of correction and normalization may be required (e.g. if acquiring images over time from the same area is not possible; or imaging can only be started after significant neurite degeneration has set in for the axotomized condition)<br />
 <br />
 
 ## 4. Visualization of neurite integrity scores (R)
