@@ -30,7 +30,7 @@ Images of intact neurites (top left) and degenerated neurites (bottom left) were
 <img src="figures/neuriteX_Fig.1a.PNG" width="800" image-rendering="pixelated"/>
 <br /><br />
 **Fig. 1.b&nbsp;&nbsp;Image segmentation using simulated images**<br />
-<img src="figures/neuriteX_Fig.1b.PNG" width="800" style="image-rendering: pixelated;"/>
+<img src="figures/neuriteX_Fig.1b.PNG" width="800" image-rendering="pixelated"/>
 <br /><br />
 
 **Details for code modules in section `#1. Single image analysis`:**<br />
