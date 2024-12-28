@@ -1,5 +1,5 @@
 # neuriteX
-A collection of functions to quantify integrity and degeneration of nerve cell processes (neurites) in microscopy images
+A collection of functions to quantify integrity or degeneration of nerve cell processes (neurites) in microscopy images
 
 ## Description
 For nerve cells expressing a fluorescent marker, the integrity of neurites (including axons and dendrites) is assessed and quantified using a numerical scoring system. The presented methods are primarily designed for research laboratories investigating neurodegenerative processes.<br /><br />
